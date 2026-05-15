@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsha Vardhan — Technical Writing Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.7;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #fff;
+      padding: 64px 0 56px;
+    }
+    header h1 { font-size: 2.75rem; font-weight: 800; letter-spacing: -0.02em; }
+    header .title { font-size: 1.2rem; color: #94a3b8; margin-top: 8px; }
+    header .contact { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+    header .contact a { color: #60a5fa; font-size: 0.95rem; }
+    header .contact a:hover { color: #93c5fd; text-decoration: none; }
+
+    section { padding: 56px 0; }
+    section:nth-child(even) { background: #fff; }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: #2563eb;
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+
+    .summary p { font-size: 1.1rem; color: #334155; max-width: 720px; }
+
+    .experience-item { margin-bottom: 32px; }
+    .experience-item:last-child { margin-bottom: 0; }
+    .experience-item h3 { font-size: 1.2rem; font-weight: 600; }
+    .experience-item .meta { color: #64748b; font-size: 0.9rem; margin: 4px 0 8px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .experience-item .meta span { display: inline-flex; align-items: center; gap: 4px; }
+    .experience-item ul { padding-left: 20px; color: #334155; }
+    .experience-item ul li { margin-bottom: 6px; }
+
+    .badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #4338ca;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 2px 10px;
+      border-radius: 999px;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin: 0 8px 10px 0;
+      border: 1px solid #e2e8f0;
+    }
+
+    .sample-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .sample-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+      transition: box-shadow 0.2s;
+    }
+    .sample-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .sample-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+    .sample-card p { font-size: 0.9rem; color: #475569; margin-bottom: 12px; }
+    .sample-card .link { font-size: 0.85rem; font-weight: 500; }
+
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 640px) {
+      header { padding: 40px 0 32px; }
+      header h1 { font-size: 2rem; }
+      header .contact { flex-direction: column; gap: 8px; }
+      .sample-grid { grid-template-columns: 1fr; }
+      section { padding: 40px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Harsha Vardhan</h1>
+    <div class="title">Technical Writing Manager</div>
+    <div class="contact">
+      <a href="mailto:harshav.kan@gmail.com">harshav.kan@gmail.com</a>
+      <a href="https://www.linkedin.com/in/harsha-vardhank/" target="_blank">linkedin.com/in/harsha-vardhank</a>
+      <a href="https://github.com/harshavkan-star" target="_blank">github.com/harshavkan-star</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2>Professional Summary</h2>
+    <div class="summary">
+      <p>
+        Technical Writing Manager with a proven track record of building and scaling 
+        documentation programs at SaaS companies. Experienced in crafting developer-focused 
+        API docs, product documentation, knowledge bases, and integration guides. 
+        Adept at leading cross-functional initiatives, establishing documentation standards, 
+        and driving self-service support through clear, comprehensive content.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Experience</h2>
+
+    <div class="experience-item">
+      <h3>Technical Writing Manager — Yellow.ai</h3>
+      <div class="meta">
+        <span>docs.yellow.ai</span>
+        <span class="badge">Product Docs</span>
+        <span class="badge">API Docs</span>
+        <span class="badge">Knowledge Base</span>
+      </div>
+      <ul>
+        <li>Owned end-to-end documentation for a conversational AI platform serving global enterprises.</li>
+        <li>Architected and maintained product documentation, API references, and integration guides used by thousands of developers.</li>
+        <li>Established content standards, style guides, and review workflows to ensure consistency and quality.</li>
+        <li>Collaborated with product, engineering, and support teams to identify content gaps and prioritize documentation initiatives.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <h3>Technical Writing Manager — Capillary Technologies</h3>
+      <div class="meta">
+        <span>docs.capillarytech.com</span>
+        <span class="badge">Developer Docs</span>
+        <span class="badge">API Reference</span>
+        <span class="badge">Integration Guides</span>
+      </div>
+      <ul>
+        <li>Led documentation for a customer loyalty and engagement SaaS platform used by 200+ brands globally.</li>
+        <li>Designed and delivered comprehensive API documentation, getting-started guides, and troubleshooting content.</li>
+        <li>Implemented a docs-as-code workflow with version control, automated builds, and continuous deployment.</li>
+        <li>Reduced support ticket deflection by 25% through strategic improvements to the knowledge base and self-service content.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Documentation Portfolios</h2>
+    <div class="sample-grid">
+      <div class="sample-card">
+        <h3>Yellow.ai Documentation</h3>
+        <p>Product documentation, API reference, integration guides, and knowledge base articles for the Yellow.ai conversational AI platform.</p>
+        <a class="link" href="https://docs.yellow.ai" target="_blank">Visit docs.yellow.ai →</a>
+      </div>
+      <div class="sample-card">
+        <h3>Capillary Technologies Docs</h3>
+        <p>Developer documentation, REST API references, and integration guides for the Capillary customer loyalty and engagement platform.</p>
+        <a class="link" href="https://docs.capillarytech.com" target="_blank">Visit docs.capillarytech.com →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Areas of Expertise</h2>
+    <div>
+      <span class="skill-tag">API Documentation</span>
+      <span class="skill-tag">Product Documentation</span>
+      <span class="skill-tag">Knowledge Base Management</span>
+      <span class="skill-tag">Developer Guides</span>
+      <span class="skill-tag">Integration Tutorials</span>
+      <span class="skill-tag">Docs-as-Code</span>
+      <span class="skill-tag">Information Architecture</span>
+      <span class="skill-tag">Content Strategy</span>
+      <span class="skill-tag">Style Guides</span>
+      <span class="skill-tag">OpenAPI / Swagger</span>
+      <span class="skill-tag">Markdown / MDX</span>
+      <span class="skill-tag">Git & Version Control</span>
+      <span class="skill-tag">Static Site Generators</span>
+      <span class="skill-tag">Cross-functional Leadership</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    &copy; 2026 Harsha Vardhan &mdash; <a href="mailto:harshav.kan@gmail.com">harshav.kan@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
