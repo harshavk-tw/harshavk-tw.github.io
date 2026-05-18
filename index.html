@@ -71,6 +71,26 @@
       border-radius: 999px;
     }
 
+    .badge-ai {
+      background: #f0fdf4;
+      color: #166534;
+    }
+
+    .badge-tool {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .skill-group { margin-bottom: 24px; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
     .skill-tag {
       display: inline-block;
       background: #f1f5f9;
@@ -82,6 +102,23 @@
       margin: 0 8px 10px 0;
       border: 1px solid #e2e8f0;
     }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+    .tool-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .tool-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .tool-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+    .tool-card p { font-size: 0.8rem; color: #64748b; }
 
     .sample-grid {
       display: grid;
@@ -113,6 +150,7 @@
       header h1 { font-size: 2rem; }
       header .contact { flex-direction: column; gap: 8px; }
       .sample-grid { grid-template-columns: 1fr; }
+      .tool-grid { grid-template-columns: 1fr 1fr; }
       section { padding: 40px 0; }
     }
   </style>
@@ -136,11 +174,12 @@
     <h2>Professional Summary</h2>
     <div class="summary">
       <p>
-        Technical Writing Manager with a proven track record of building and scaling 
-        documentation programs at SaaS companies. Experienced in crafting developer-focused 
-        API docs, product documentation, knowledge bases, and integration guides. 
-        Adept at leading cross-functional initiatives, establishing documentation standards, 
-        and driving self-service support through clear, comprehensive content.
+        Technical Writing Manager with deep expertise in AI/agentic documentation, 
+        API reference content, and self-service knowledge bases. I build documentation 
+        programs that scale — combining docs-as-code pipelines, AI-assisted workflows, 
+        and structured content strategies to reduce support tickets and improve 
+        developer experience. Experienced leading cross-functional initiatives at 
+        SaaS companies serving global enterprises.
       </p>
     </div>
   </div>
@@ -156,13 +195,15 @@
         <span>docs.yellow.ai</span>
         <span class="badge">Product Docs</span>
         <span class="badge">API Docs</span>
-        <span class="badge">Knowledge Base</span>
+        <span class="badge badge-ai">AI Platform</span>
+        <span class="badge badge-tool">Automation</span>
       </div>
       <ul>
-        <li>Owned end-to-end documentation for a conversational AI platform serving global enterprises.</li>
-        <li>Architected and maintained product documentation, API references, and integration guides used by thousands of developers.</li>
-        <li>Established content standards, style guides, and review workflows to ensure consistency and quality.</li>
-        <li>Collaborated with product, engineering, and support teams to identify content gaps and prioritize documentation initiatives.</li>
+        <li>Owned end-to-end documentation for a conversational AI platform serving global enterprises, covering LLM-powered bots, agentic workflows, and NLU pipelines.</li>
+        <li>Architected and maintained product documentation, API references, and integration guides used by thousands of developers across 60+ countries.</li>
+        <li>Integrated AI-assisted authoring workflows (Claude, GPT) into the documentation pipeline, reducing draft-to-publish cycle time by 40%.</li>
+        <li>Established content standards, style guides, and review workflows to ensure consistency across 500+ documentation pages.</li>
+        <li>Drove automation documentation — covering event-driven triggers, webhook integrations, and automated response orchestration.</li>
       </ul>
     </div>
 
@@ -175,10 +216,26 @@
         <span class="badge">Integration Guides</span>
       </div>
       <ul>
-        <li>Led documentation for a customer loyalty and engagement SaaS platform used by 200+ brands globally.</li>
-        <li>Designed and delivered comprehensive API documentation, getting-started guides, and troubleshooting content.</li>
-        <li>Implemented a docs-as-code workflow with version control, automated builds, and continuous deployment.</li>
-        <li>Reduced support ticket deflection by 25% through strategic improvements to the knowledge base and self-service content.</li>
+        <li>Led documentation for a customer loyalty and engagement SaaS platform used by 200+ brands globally, including AI-driven personalization and recommendation modules.</li>
+        <li>Designed and delivered comprehensive API documentation, getting-started guides, and troubleshooting content covering REST, GraphQL, and webhook integrations.</li>
+        <li>Implemented a docs-as-code workflow with Git-based version control, automated builds via GitHub Actions, and continuous deployment — enabling concurrent contributions from 12+ engineers.</li>
+        <li>Reduced support ticket deflection by 25% through strategic knowledge base restructuring and AI-powered search optimization.</li>
+        <li>Created automation-focused documentation covering loyalty campaign automation, triggered messaging, and rule-based engagement workflows.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>AI & Automation Documentation</h2>
+    <div class="experience-item">
+      <ul>
+        <li><strong>LLM & Agent Docs</strong> — Authored developer guides for building conversational agents using LLMs, covering prompt engineering, context management, and function calling.</li>
+        <li><strong>AI-Assisted Authoring</strong> — Built internal tooling and prompt libraries using Claude and GPT to automate first drafts, API reference generation, and changelog creation.</li>
+        <li><strong>Workflow Automation</strong> — Documented event-driven architectures, webhook integrations, and no-code/low-code automation builders for business users.</li>
+        <li><strong>Knowledge Base AI</strong> — Configured AI-powered search and retrieval-augmented generation (RAG) pipelines to power self-service support portals.</li>
+        <li><strong>Video & Visual Docs</strong> — Created tutorial videos and product walkthroughs using HeyGen AI avatars and draw.io diagrams for complex workflows.</li>
       </ul>
     </div>
   </div>
@@ -204,21 +261,94 @@
 
 <section>
   <div class="container">
+    <h2>Tools & Platforms</h2>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <h3>Claude</h3>
+        <p>AI-assisted authoring, prompt engineering, content generation</p>
+      </div>
+      <div class="tool-card">
+        <h3>HeyGen</h3>
+        <p>AI video avatars for product walkthroughs and tutorials</p>
+      </div>
+      <div class="tool-card">
+        <h3>draw.io</h3>
+        <p>Architecture diagrams, workflow visuals, system design</p>
+      </div>
+      <div class="tool-card">
+        <h3>GitHub Actions</h3>
+        <p>CI/CD for docs-as-code pipelines and automated builds</p>
+      </div>
+      <div class="tool-card">
+        <h3>OpenAPI / Swagger</h3>
+        <p>API specification authoring and codegen integration</p>
+      </div>
+      <div class="tool-card">
+        <h3>Docusaurus</h3>
+        <p>Static site generation for developer documentation portals</p>
+      </div>
+      <div class="tool-card">
+        <h3>Jira / Confluence</h3>
+        <p>Project tracking, knowledge base management, cross-team collaboration</p>
+      </div>
+      <div class="tool-card">
+        <h3>Postman</h3>
+        <p>API exploration, collection generation, and documentation</p>
+      </div>
+      <div class="tool-card">
+        <h3>Snagit / Camtasia</h3>
+        <p>Screenshot annotations, screencast recording, video editing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
     <h2>Areas of Expertise</h2>
-    <div>
+
+    <div class="skill-group">
+      <h3>Documentation &amp; Content Strategy</h3>
       <span class="skill-tag">API Documentation</span>
       <span class="skill-tag">Product Documentation</span>
       <span class="skill-tag">Knowledge Base Management</span>
       <span class="skill-tag">Developer Guides</span>
       <span class="skill-tag">Integration Tutorials</span>
-      <span class="skill-tag">Docs-as-Code</span>
       <span class="skill-tag">Information Architecture</span>
       <span class="skill-tag">Content Strategy</span>
       <span class="skill-tag">Style Guides</span>
+      <span class="skill-tag">Docs-as-Code</span>
+    </div>
+
+    <div class="skill-group">
+      <h3>AI &amp; Automation</h3>
+      <span class="skill-tag">LLM Documentation</span>
+      <span class="skill-tag">Agentic Workflows</span>
+      <span class="skill-tag">Prompt Engineering</span>
+      <span class="skill-tag">AI-Assisted Authoring</span>
+      <span class="skill-tag">RAG &amp; AI Search</span>
+      <span class="skill-tag">Workflow Automation</span>
+      <span class="skill-tag">Webhook Documentation</span>
+    </div>
+
+    <div class="skill-group">
+      <h3>API &amp; Developer Experience</h3>
       <span class="skill-tag">OpenAPI / Swagger</span>
+      <span class="skill-tag">REST &amp; GraphQL</span>
+      <span class="skill-tag">Postman Collections</span>
+      <span class="skill-tag">Code Samples &amp; SDKs</span>
+      <span class="skill-tag">API Changelogs</span>
+      <span class="skill-tag">Versioning Strategy</span>
+    </div>
+
+    <div class="skill-group">
+      <h3>Tech &amp; Workflow</h3>
       <span class="skill-tag">Markdown / MDX</span>
-      <span class="skill-tag">Git & Version Control</span>
+      <span class="skill-tag">Git &amp; Version Control</span>
       <span class="skill-tag">Static Site Generators</span>
+      <span class="skill-tag">Docusaurus / VuePress</span>
+      <span class="skill-tag">CI/CD for Docs</span>
+      <span class="skill-tag">Jira / Confluence</span>
       <span class="skill-tag">Cross-functional Leadership</span>
     </div>
   </div>
